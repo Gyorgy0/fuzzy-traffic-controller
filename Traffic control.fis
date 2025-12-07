@@ -1,0 +1,38 @@
+[System]
+Name='Traffic control'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Traffic density'
+Range=[0 1]
+NumMFs=3
+MF1='Low':'trapmf',[-0.375 -0.04167 0.179947460595447 0.375]
+MF2='Medium':'trapmf',[0.125 0.486427320490368 0.602889667250438 0.875]
+MF3='High':'trapmf',[0.625 0.734238178633976 1.042 1.375]
+
+[Input2]
+Name='Queue length'
+Range=[0 1]
+NumMFs=3
+MF1='Short':'gauss2mf',[0.1416 -0.04167 0.172541731757286 0.134413309982487]
+MF2='Medium':'gauss2mf',[0.1342531433132 0.449649737302977 0.123841142258881 0.56260945709282]
+MF3='Long':'gauss2mf',[0.114916569926608 0.926882661996497 0.1416 1.042]
+
+[Output1]
+Name='Signal length'
+Range=[0 1]
+NumMFs=3
+MF1='Short':'trapmf',[-0.375 -0.04167 0.35507880910683 0.459281961471103]
+MF2='Medium':'trapmf',[0.125 0.508318739054291 0.691330998248687 0.875]
+MF3='Full':'trapmf',[0.625 0.894483362521892 1.042 1.375]
+
+[Rules]

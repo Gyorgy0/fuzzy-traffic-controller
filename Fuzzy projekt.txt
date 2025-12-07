@@ -1,0 +1,5 @@
+Fuzzy logika alapú közlekedési lámpa irányítás összehasonlítása egy fix időszeletű rendszer hatékonyságával egy négy irányú kereszteződésben
+Fuzzy inputok:
+- forgalom sűrűsége - közlekedési eszköz függő -> nagyobb utassűrűségű eszközök prioritizálása pl. buszok
+- sor hossza - közlekedési eszközök száma egy adott "sorban"
+- gyalogosok száma - gyalogosok száma adott kereszteződés résznél
